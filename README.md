@@ -8,5 +8,11 @@ I'm using Rust as the programming language to improve my mathemetical skills for
 - Building executable files is straight forward.
 - It's helping me learn Rust as well as re-cover some of the basic fundlementals of Mathematics simultaneously.
 
+## To-Do List
+- [x] Basic trigonometry.
+- [x] Factorials.
+- [ ] Project Euler - First 10 Archieves
+
+
 ## Credits
 Some of the maths problems I've used are universal; they are common knowledge and do not belong to anyone. However, there are also problems taken from Project Euler which can be found at: https://projecteuler.net/archives
