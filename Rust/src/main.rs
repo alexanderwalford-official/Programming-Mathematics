@@ -125,11 +125,11 @@ fn averages () {
     }
     // sort the array, lowest to largest then the last value is the highest
     a_x_m.sort();
-    println!("Mode: {}", a_x_m[11]);
+    println!("Mode: {}", a_x_m[a_x_m.len()]);
 
     // median
     a_x_m.sort();
-    println!("Median: {}", a_x_m[5]);
+    println!("Median: {}", a_x_m[a_x_m.len() / 2]);
 }
 
 
