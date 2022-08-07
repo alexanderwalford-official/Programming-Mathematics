@@ -3,6 +3,7 @@
 fn main() {
     // You can uncomment specific functions:
     //shapes();
+    //averages();
     //factorials(56.0);
     problem_1();
 }
@@ -88,8 +89,47 @@ fn shapes () {
         Answer = SideA / SideC;
         Answer = Answer.sin();
     }
-    println!("Trig Answer: {}", Answer);
-    
+    println!("Trig Answer: {}", Answer);    
+}
+
+/*
+    Averages
+    In this section, we'll cover the mean, median and mode averages
+    and how you should implement them.
+*/
+
+fn averages () {
+    // Task: Calculate the mean, mode and median from an array of integers
+    // solution:
+    // mean = all nums added together devided by amount of nums,
+    // median = middle number after list is sorted in linear order,
+    // mode = the largest amount of a specific number
+
+    // declare array
+    let mut a_x: [i64; 12] = [42, 36, 93, 23, 46, 89, 30, 42, 74, 35, 26, 42];
+
+    let t_6sum: i64;
+
+    // mean
+    t_6sum = a_x.sum() / a_x.lenth();
+    println!("Mean: {}", t_6sum);
+
+    // mode
+    let mut a_x_m: [i64, 12]; // count for each a_x value
+    let i_counter_m: i64 = 0; // localised counter for pointer position
+    for i64 i in a_x { 
+        if i = i[i_counter_m - 1] && i != 0 {
+            a_x_m[i]++;
+        }
+        i_counter_m++;
+    }
+    // sort the array, lowest to largest then the last value is the highest
+    a_x_m.sort();
+    println!("Mode: {}", a_x_m[11]);
+
+    // median
+    a_x_m.sort();
+    println!("Median: {}", a_x_m[5]);
 }
 
 
