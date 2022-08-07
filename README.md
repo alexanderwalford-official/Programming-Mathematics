@@ -11,6 +11,7 @@ I'm using Rust as the programming language to improve my mathemetical skills for
 ## To-Do List
 - [x] Basic trigonometry.
 - [x] Factorials.
+- [x] Averages.
 - [ ] Project Euler - First 10 Archieves
 
 
