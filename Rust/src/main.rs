@@ -1,5 +1,7 @@
 #![allow(non_snake_case)]
 
+use std::fmt::Pointer;
+
 fn main() {
     // You can uncomment specific functions:
     //shapes();
@@ -107,25 +109,33 @@ fn averages () {
 
     // declare array
     let mut a_x: [i64; 12] = [42, 36, 93, 23, 46, 89, 30, 42, 74, 35, 26, 42];
+    let mut last_value = 0;
 
     let t_6sum: i64;
 
     // mean
-    t_6sum = a_x.sum() / a_x.lenth();
+    let xx: i64 = a_x.iter().sum();
+    t_6sum = xx / a_x.len() as i64;
     println!("Mean: {}", t_6sum);
 
     // mode
-    let mut a_x_m: [i64, 12]; // count for each a_x value
-    let i_counter_m: i64 = 0; // localised counter for pointer position
-    for i64 i in a_x { 
-        if i = i[i_counter_m - 1] && i != 0 {
-            a_x_m[i]++;
+    // tip: I think that there may be a major flaw with this; does it check values before the current index? probably not
+    // how would we fix this?
+    let mut a_x_m: [i64; 12] = [0,0,0,0,0,0,0,0,0,0,0,0]; // count for each a_x value
+    let pointer: i64 = 0;
+    for i in a_x { 
+        // if current index pointer value equals the last array value
+        if i == a_x[pointer as usize - 1] || i !=0 {
+            // increment the value at the current pointer in the counter value array
+            a_x_m[pointer as usize] = a_x_m[pointer as usize] + 1;
         }
-        i_counter_m++;
+        // set the value in array 2
+        last_value = i;
     }
+    
     // sort the array, lowest to largest then the last value is the highest
     a_x_m.sort();
-    println!("Mode: {}", a_x_m[a_x_m.len()]);
+    println!("Mode: {}", a_x_m[12]);
 
     // median
     a_x_m.sort();
@@ -224,9 +234,5 @@ fn problem_2 () {
     // By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
     
     // Soltion: 
-
-
-
-
 
 }
