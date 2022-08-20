@@ -4,10 +4,11 @@ use std::fmt::Pointer;
 
 fn main() {
     // You can uncomment specific functions:
-    //shapes();
-    //averages();
-    //factorials(56.0);
-    problem_1();
+    // shapes();
+    // averages();
+    // factorials(56.0);
+    // problem_1();
+    square_rt();
 }
 
 fn shapes () {
@@ -186,6 +187,43 @@ fn factorials (input: f64) {
             println!("{:?}", i_answer);        
         }
     }
+}
+
+
+fn square_rt () {
+
+    let sqr: i64 = 27;
+    let mut result: i64 = 0;
+
+    /*
+
+        Standard Mathematics:
+
+        How do we find the square root of a number?
+
+        Firstly, we must understand what a square root is:
+        - a whole number that can be multiplied by another to create our starting number
+
+        For example, for the number 27:
+        2 x 10 = 20 = 2 x 5
+        1 x 7 = 7
+
+        Meaning that the aquare number of 27 are: 2, 5, 1, 7
+
+        This is accomplished by splitting the numbers into tens, hundreds (etc)
+        and then by figuring out what number can be multiplied to make it.
+
+
+        Computing:
+
+        When it comes to computing, the computer does not understand anything; including what
+        the times table is. Therefore, we need to iterate through our multiples in order to
+        get the desired result. The time complexity of the final solution is dependant on the
+        selected method and how large the number is (at least a time complexity of O(n)). 
+    */
+
+    
+
 }
 
 
