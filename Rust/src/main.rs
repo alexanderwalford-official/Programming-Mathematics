@@ -8,7 +8,6 @@ fn main() {
     // averages();
     // factorials(56.0);
     // problem_1();
-    prime_factorials();
 }
 
 fn shapes () {
@@ -162,6 +161,32 @@ static mut i_answer: [i64; 20] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // s
 static mut i_OriginalNum: f64 = 0.0;
 
 fn factorials (input: f64) {
+
+    /*
+        Standard Mathematics:
+
+        To find the prime factorials of a number, all we must do is split
+        the number into a multiple of 10(i) and single units. 
+
+        Example:
+
+        Find the prime factorials of 28:
+
+        20              8
+
+        2 x 10          2 x 4
+        1 x 5           1 x 2
+
+        Prime factorials: 1, 5, 1, 2
+
+
+        Computing:
+
+        Computers do not understand the concept of prime factorials, thereore we
+        must first define what they are in terms of computer code. 
+    */
+
+
     unsafe {
         // save the original number
         if i_counter == 0 {
@@ -190,41 +215,11 @@ fn factorials (input: f64) {
 }
 
 
-fn prime_factorials () {
-
-    /*
-        Standard Mathematics:
-
-        To find the prime factorials of a number, all we must do is split
-        the number into a multiple of 10(i) and single units. 
-
-        Example:
-
-        Find the prime factorials of 28:
-
-        20              8
-
-        2 x 10          2 x 4
-        1 x 5           1 x 2
-
-        Prime factorials: 1, 5, 1, 2
-
-
-        Computing:
-
-        Computers do not understand the concept of prime factorials, thereore we
-        must first define what they are in terms of computer code. 
-
-
-
-    */
-
-}
-
-
 fn sqrt () {
 
     /*
+        Square Root
+
         Standard Mathematics:
     
 
@@ -233,6 +228,7 @@ fn sqrt () {
         
     
     */
+    
 
 }
 
