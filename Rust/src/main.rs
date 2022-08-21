@@ -8,7 +8,7 @@ fn main() {
     // averages();
     // factorials(56.0);
     // problem_1();
-    square_rt();
+    prime_factorials();
 }
 
 fn shapes () {
@@ -190,41 +190,52 @@ fn factorials (input: f64) {
 }
 
 
-fn square_rt () {
-
-    let sqr: i64 = 27;
-    let mut result: i64 = 0;
+fn prime_factorials () {
 
     /*
-
         Standard Mathematics:
 
-        How do we find the square root of a number?
+        To find the prime factorials of a number, all we must do is split
+        the number into a multiple of 10(i) and single units. 
 
-        Firstly, we must understand what a square root is:
-        - a whole number that can be multiplied by another to create our starting number
+        Example:
 
-        For example, for the number 27:
-        2 x 10 = 20 = 2 x 5
-        1 x 7 = 7
+        Find the prime factorials of 28:
 
-        Meaning that the aquare number of 27 are: 2, 5, 1, 7
+        20              8
 
-        This is accomplished by splitting the numbers into tens, hundreds (etc)
-        and then by figuring out what number can be multiplied to make it.
+        2 x 10          2 x 4
+        1 x 5           1 x 2
+
+        Prime factorials: 1, 5, 1, 2
 
 
         Computing:
 
-        When it comes to computing, the computer does not understand anything; including what
-        the times table is. Therefore, we need to iterate through our multiples in order to
-        get the desired result. The time complexity of the final solution is dependant on the
-        selected method and how large the number is (at least a time complexity of O(n)). 
+        Computers do not understand the concept of prime factorials, thereore we
+        must first define what they are in terms of computer code. 
+
+
+
     */
 
+}
+
+
+fn sqrt () {
+
+    /*
+        Standard Mathematics:
     
 
+
+        Computing:
+        
+    
+    */
+
 }
+
 
 
     /*
