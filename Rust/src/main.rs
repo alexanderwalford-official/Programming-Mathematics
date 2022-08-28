@@ -1,6 +1,8 @@
 #![allow(non_snake_case)]
 
 use std::fmt::Pointer;
+use std::io;
+use std::io::*;
 
 fn main() {
     // You can uncomment specific functions:
@@ -215,20 +217,45 @@ fn factorials (input: f64) {
 }
 
 
-fn sqrt () {
 
+fn sqrt () {
     /*
-        Square Root
+        Square Root Using Bakhshali Method
 
         Standard Mathematics:
-    
-
+        x = 600
+        a = 125348 - 600*2(squared) / 2 x 600 = -195.543
+        b = 600 + (-195) = 404.456
+        x = 404.456 - (-195.543)*2 (squared) / 2 x 404.456 = 357
 
         Computing:
-        
-    
     */
+
+    print!("Please enter your value for x:");
+
+    let mut input = String::new();
+    io::stdin().read_line(&mut input)
+        .expect("Illegal character type entered!");
+
+    io::stdin().read_line(&mut input);
+
+    print!("Please enter your value for s:");
+
+    let mut input2 = String::new();
+    io::stdin().read_line(&mut input)
+        .expect("Illegal character type entered!");
+
+    io::stdin().read_line(&mut input2);
     
+    let s: i64 = input2.parse().unwrap();
+    let mut x: i64 = input.parse().unwrap();
+    let a: i64 = s - x * x / 2 * x;
+    let b: i64 = x + (-a);
+    x = b - (-a) * (-a) / 2 * b;
+    
+    println!(" {}", x);
+
+    // more iterations of this method = more accuracy 
 
 }
 
