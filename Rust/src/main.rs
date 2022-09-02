@@ -262,14 +262,72 @@ fn sqrt () {
 }
 
 
+fn ratios () {
 
+    /* 
+        Problem:
+        A certain island contains 540 cats and 675 dogs. What is the ratio of cats to dogs on this island?
+
+        Answer:
+        Essentially, simplify the ratio to its lowest equal sided values by finding the lowest divisible number for the intiial values
+
+        Breakdown / Example:
+
+        initial ratio: 
+        540 / 675 or 540 : 675
+        
+        next simplify:
+        540 / 5 = 108
+        675 / 5 = 135
+        
+        current ratio:
+        108 / 135 or 108 : 135
+
+        simplify further:
+        108 / 9 = 12
+        135 / 9 = 15
+        both of these numbers are divisible by 9
+
+        simplify one last time:
+        12 = 4 * 3
+        15 = 5 * 3
+        both of these numbers are multiples of 3, the answer is the number of multiplications it takes
+        
+        now we have our simplified answer:
+        4 / 5 or 4 : 5
+
+
+        Computing (static values):
+    */
+
+    // define initial mutable values
+    let mut cats: i64 = 540;
+    let mut dogs: i64 = 675;
+
+    cats = cats / 5; // both can devided by 5
+    dogs = dogs / 5;
+
+    cats = cats / 9; // both can be devided by 9
+    dogs = dogs / 9;
+
+    cats = cats / 3; // both can be devided by 3
+    dogs = dogs / 3;
+
+    println!("CATS : DOGS");
+    println!("{} : {}", cats, dogs);
+
+    /*
+        Future Challenge:
+        Write an automated algorithm that can simplify ratios using the above method, with less steps.
+    */
+
+}
     /*
     
         These next secions contain maths problems from the euler archives
         which can be found at: https://projecteuler.net/archives
     
     */
-
 
 static mut i_problem1_counter: i64 = 0;
 static mut i_problem1_answer: i64 = 0;
