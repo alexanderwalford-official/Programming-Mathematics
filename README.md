@@ -13,6 +13,7 @@ I'm using Rust as the programming language to improve my mathemetical skills for
 - [x] Factorials.
 - [x] Averages.
 - [x] Square root.
+- [x] Ratios.
 - [ ] Project Euler - First 10 Archieves
 
 
